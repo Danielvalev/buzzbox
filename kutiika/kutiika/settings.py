@@ -47,6 +47,8 @@ INSTALLED_APPS = [
 
     # local apps
     'pages',
+    'customers',
+    'restaurants',
 ]
 
 MIDDLEWARE = [
