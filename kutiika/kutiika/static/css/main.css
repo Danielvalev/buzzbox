@@ -1,3 +1,8 @@
+:root {
+  --main-bg-color: #f1f1f1;
+  --main-color: #a5e8e5;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -16,20 +21,20 @@ html {
 }
 
 .body {
-  background-color: rgb(245, 252, 255);
+  background-color: var(--main-bg-color);
 }
 
 /* TopBar */
 .topbar {
-  background-color: rgb(0, 112, 160);
+  background-color: var(--main-color);
 }
 
 /* NavBar */
 .navbar {
-  background-color: rgb(245, 252, 255);
+  background-color: var(--main-bg-color);
 }
 
 /* NavBar */
 .footer {
-  background-color: rgb(0, 112, 160);
+  background-color: var(--main-color);
 }
