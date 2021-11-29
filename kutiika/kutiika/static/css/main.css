@@ -21,15 +21,15 @@ html {
 
 /* TopBar */
 .topbar {
-  background-color: red;
+  background-color: rgb(0, 112, 160);
 }
 
 /* NavBar */
 .navbar {
-  background-color: red;
+  background-color: rgb(245, 252, 255);
 }
 
 /* NavBar */
 .footer {
-  background-color: red;
+  background-color: rgb(0, 112, 160);
 }
