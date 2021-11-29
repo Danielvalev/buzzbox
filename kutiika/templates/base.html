@@ -6,9 +6,23 @@
     <title>Title</title>
     <link rel="stylesheet" href="{% static 'css/main.css' %}" />
   </head>
-  <body>
-    {% include 'includes/topbar.html' %} {% include 'includes/navbar.html' %}
-    {%block content %} {% endblock %} {% include 'includes/footer.html'%}
+  <body class="ttt">
+    <!-- topbar -->
+    {% include 'includes/topbar.html' %}
+
+    <!-- navbar -->
+    {% include 'includes/navbar.html' %}
+
+    <!-- block content -->
+    {% block content %}
+
+    <!-- endblock -->
+    {% endblock %}
+
+    <!-- footer -->
+    {%include 'includes/footer.html'%}
+
+    <!-- add js scripts -->
     <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
   </body>
 </html>
