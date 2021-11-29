@@ -1,14 +1,17 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
+<head>
+    <meta charset="UTF-8"/>
     <title>Title</title>
-    <link rel="stylesheet" href="{% static 'css/main.css' %}" />
-  </head>
-  <body>
-    {% include 'includes/topbar.html' %} {% include 'includes/navbar.html' %}
-    {%block content %} {% endblock %} {% include 'includes/footer.html'%}
-    <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
-  </body>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}"/>
+</head>
+<body>
+{% include 'includes/topbar.html' %}
+{% include 'includes/navbar.html' %}
+{% block content %}
+{% endblock %}
+{% include 'includes/footer.html'%}
+<script type="text/javascript" src="{% static 'js/main.js' %}"></script>
+</body>
 </html>
