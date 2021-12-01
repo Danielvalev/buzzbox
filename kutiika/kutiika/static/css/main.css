@@ -44,12 +44,22 @@ html {
 .topbar h2 {
   font-size: 2.8rem;
 }
+.logo-container {
+  height: 11rem;
+  width: 11rem;
+  background: url(../img/logo.svg) left top no-repeat;
+  background-size: 11rem 11rem;
+  /* display: block; */
+  position: relative;
+}
 
-.topbar img {
-  display: block;
-  width: auto;
-  height: 12rem;
-  padding: 0.4rem 0;
+#logo-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 1.6rem;
 }
 
 /* NavBar - not for home */
