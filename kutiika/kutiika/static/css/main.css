@@ -1,9 +1,9 @@
 :root {
   /* --main-bg-color: #f1f1f1;
-  --main-color: #a5e8e5; */
+  --h-and-f-color: #a5e8e5; */
 
-  --main-bg-color: #f1f1f1;
-  --main-color: #ff8c8c;
+  --main-bg-color: #fafafa;
+  --h-and-f-color: #f8f8f8;
   --login-btn-color: #ff8c8c;
 }
 
@@ -33,11 +33,12 @@ html {
 
 /* TopBar */
 .topbar {
-  background-color: var(--main-color);
+  background-color: var(--h-and-f-color);
   display: flex;
   align-items: center;
   justify-content: space-around;
-  height: 8rem;
+  height: 12rem;
+  box-shadow: 0px 10px 10px -5px rgba(0, 0, 0, 0.1);
 }
 
 .topbar h2 {
@@ -47,7 +48,8 @@ html {
 .topbar img {
   display: block;
   width: auto;
-  height: 8rem;
+  height: 12rem;
+  padding: 0.4rem 0;
 }
 
 /* NavBar - not for home */
@@ -62,14 +64,14 @@ html {
 /* LOG IN SECTION */
 .login-section {
   height: 50%;
-  width: 96%;
-  margin: 0 auto;
+  width: 92%;
+  margin: 2rem auto;
   display: flex;
   flex-direction: column;
 }
 
 .login-section h2 {
-  margin: 3.4rem auto 0rem auto;
+  margin: 3.2rem auto 0rem auto;
   font-size: 2.2rem;
   letter-spacing: 0.4rem;
   text-transform: uppercase;
@@ -78,8 +80,8 @@ html {
 input[type="text"],
 input[type="password"] {
   width: 80%;
-  padding: 12px 20px;
-  margin: 2rem auto;
+  padding: 1.2rem 2rem;
+  margin: 3.2rem auto;
   display: inline-block;
   border: 1px solid #ccc;
   box-sizing: border-box;
@@ -101,7 +103,7 @@ input[type="text"] {
   display: flex;
   justify-content: space-around;
   width: 84%;
-  margin: 0 auto;
+  margin: 0 auto 2rem auto;
 }
 
 .login-section__btn-container button {
@@ -123,14 +125,22 @@ input[type="text"] {
 
 .media-section {
   background-color: #ccc;
-  height: 50%;
   width: 100%;
-  margin: 0 auto;
+  height: 100%;
+  margin: 0rem auto;
+  background-image: url(../img/img-handy.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 /* Footer */
 .footer {
-  background-color: var(--main-color);
+  background-color: var(--h-and-f-color);
   height: 7vh;
   min-height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px -6px 10px -5px rgba(0, 0, 0, 0.1);
 }
