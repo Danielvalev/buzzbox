@@ -1,11 +1,19 @@
+@font-face {
+  font-family: "GUERRILLA";
+  src: url(../fonts/GUERRILLA-Normal.ttf);
+}
+
 :root {
   /* --main-bg-color: #f1f1f1;
+  accent-coral: #FF8C8C;
+  complementary-green: #acc8de;
   --h-and-f-color: #a5e8e5; */
 
   --main-bg-color: #fafffeb9;
-  --h-and-f-color: rgba(240, 255, 253, 0.8);
-  --login-btn-color: #ff8c8c;
-  --login-btn-color-dark: #b15454;
+  --h-and-f-color: #fafffef8;
+  --login-btn-color: #a5e8e5;
+  --logo-color: #a5e8e5;
+  --login-btn-color-dark: #62918e;
 }
 
 * {
@@ -28,8 +36,8 @@ html {
 
 .body {
   background-color: var(--main-bg-color);
-  /* max-width: 52rem; */
-  /* margin: 0 auto; */
+  max-width: 52rem;
+  margin: 0 auto;
 }
 
 /* TopBar */
@@ -57,7 +65,7 @@ html {
 .logo-container {
   height: 11rem;
   width: 11rem;
-  background-color: var(--login-btn-color);
+  background-color: var(--logo-color);
 
   mask-image: url(../img/logo.svg);
   mask-size: 11rem 11rem;
@@ -101,7 +109,7 @@ html {
 .login-section h2 {
   margin: 3.2rem auto 0rem auto;
   font-size: 2.2rem;
-  letter-spacing: 0.4rem;
+  letter-spacing: 0.2rem;
   text-transform: uppercase;
 }
 
@@ -166,11 +174,12 @@ input[type="text"] {
 
 /* Footer */
 .footer {
+  margin-top: 1rem;
   background-color: var(--h-and-f-color);
   height: 7vh;
   min-height: 4rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  /* box-shadow: 0px -6px 10px -5px rgba(0, 0, 0, 0.1); */
+  box-shadow: 0px -6px 10px -5px rgba(0, 0, 0, 0.1);
 }
