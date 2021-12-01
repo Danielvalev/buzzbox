@@ -2,9 +2,10 @@
   /* --main-bg-color: #f1f1f1;
   --h-and-f-color: #a5e8e5; */
 
-  --main-bg-color: #fafafa;
-  --h-and-f-color: #f8f8f8;
+  --main-bg-color: #fafffeb9;
+  --h-and-f-color: rgba(240, 255, 253, 0.8);
   --login-btn-color: #ff8c8c;
+  --login-btn-color-dark: #b15454;
 }
 
 * {
@@ -44,12 +45,28 @@ html {
 .topbar h2 {
   font-size: 2.8rem;
 }
-.logo-container {
+
+/* .logo-container {
   height: 11rem;
   width: 11rem;
   background: url(../img/logo.svg) left top no-repeat;
   background-size: 11rem 11rem;
-  /* display: block; */
+  position: relative;
+} */
+
+.logo-container {
+  height: 11rem;
+  width: 11rem;
+  background-color: var(--login-btn-color);
+
+  mask-image: url(../img/logo.svg);
+  mask-size: 11rem 11rem;
+  mask-repeat: no-repeat;
+
+  -webkit-mask-image: url(../img/logo.svg);
+  -webkit-mask-size: 11rem 11rem;
+  -webkit-mask-repeat: no-repeat;
+
   position: relative;
 }
 
@@ -60,6 +77,7 @@ html {
   transform: translate(-50%, -50%);
   text-align: center;
   font-size: 1.6rem;
+  font-family: "GUERRILLA";
 }
 
 /* NavBar - not for home */
@@ -119,16 +137,18 @@ input[type="text"] {
 .login-section__btn-container button {
   background-color: var(--login-btn-color);
   color: white;
-  padding: 1.4rem 2rem;
+  padding: 1.2rem 1.8rem;
   margin: 8px 0;
   border: none;
   cursor: pointer;
   width: 36%;
   border-radius: 3rem;
+  border: 2px solid var(--login-btn-color);
 }
 
 .login-section__btn-container button:hover {
   opacity: 0.8;
+  border: 2px solid var(--login-btn-color-dark);
 }
 
 /* MEDIA SECTION */
@@ -152,5 +172,5 @@ input[type="text"] {
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0px -6px 10px -5px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0px -6px 10px -5px rgba(0, 0, 0, 0.1); */
 }
