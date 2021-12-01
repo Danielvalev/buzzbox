@@ -1,6 +1,10 @@
 :root {
+  /* --main-bg-color: #f1f1f1;
+  --main-color: #a5e8e5; */
+
   --main-bg-color: #f1f1f1;
-  --main-color: #a5e8e5;
+  --main-color: #ff8c8c;
+  --login-btn-color: #ff8c8c;
 }
 
 * {
@@ -18,23 +22,115 @@ html {
   box-sizing: border-box;
   /* 1 rem = 10px because 10px/16 defualtpx = 62.5% */
   font-size: 62.5%;
+  font-family: "Lato", sans-serif;
 }
 
 .body {
   background-color: var(--main-bg-color);
+  /* max-width: 52rem; */
+  /* margin: 0 auto; */
 }
 
 /* TopBar */
 .topbar {
   background-color: var(--main-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 8rem;
 }
 
-/* NavBar */
-.navbar {
-  background-color: var(--main-bg-color);
+.topbar h2 {
+  font-size: 2.8rem;
 }
 
-/* NavBar */
+.topbar img {
+  display: block;
+  width: auto;
+  height: 8rem;
+}
+
+/* NavBar - not for home */
+
+/* home-main */
+.home-main {
+  height: 88vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* LOG IN SECTION */
+.login-section {
+  height: 50%;
+  width: 96%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.login-section h2 {
+  margin: 3.4rem auto 0rem auto;
+  font-size: 2.2rem;
+  letter-spacing: 0.4rem;
+  text-transform: uppercase;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 80%;
+  padding: 12px 20px;
+  margin: 2rem auto;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  border-radius: 3rem;
+}
+
+input[type="text"]::placeholder,
+input[type="password"]::placeholder {
+  color: #5a2020;
+  opacity: 0.8;
+  letter-spacing: 0.16rem;
+}
+
+input[type="text"] {
+  margin-bottom: 0.4rem;
+}
+
+.login-section__btn-container {
+  display: flex;
+  justify-content: space-around;
+  width: 84%;
+  margin: 0 auto;
+}
+
+.login-section__btn-container button {
+  background-color: var(--login-btn-color);
+  color: white;
+  padding: 1.4rem 2rem;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 36%;
+  border-radius: 3rem;
+}
+
+.login-section__btn-container button:hover {
+  opacity: 0.8;
+}
+
+/* MEDIA SECTION */
+
+.media-section {
+  background-color: #ccc;
+  height: 50%;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Footer */
 .footer {
   background-color: var(--main-color);
+  height: 7vh;
+  min-height: 4rem;
 }
