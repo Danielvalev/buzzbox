@@ -10,10 +10,11 @@
   --h-and-f-color: #a5e8e5; */
 
   --main-bg-color: #fafffeb9;
-  --h-and-f-color: #fafffef8;
+  --h-and-f-color: #f8fffef8;
   --login-btn-color: #a5e8e5;
   --logo-color: #a5e8e5;
   --login-btn-color-dark: #62918e;
+  --login-text-color-dark: #1d2c2b;
 }
 
 * {
@@ -36,6 +37,11 @@ html {
 
 .body {
   background-color: var(--main-bg-color);
+}
+
+.home-main,
+.footer,
+.topbar {
   max-width: 52rem;
   margin: 0 auto;
 }
@@ -48,31 +54,20 @@ html {
   justify-content: space-around;
   height: 12rem;
   box-shadow: 0px 10px 10px -5px rgba(0, 0, 0, 0.1);
+  padding: 6.6rem 0;
 }
-
-.topbar h2 {
-  font-size: 2.8rem;
-}
-
-/* .logo-container {
-  height: 11rem;
-  width: 11rem;
-  background: url(../img/logo.svg) left top no-repeat;
-  background-size: 11rem 11rem;
-  position: relative;
-} */
 
 .logo-container {
-  height: 11rem;
-  width: 11rem;
+  height: 11.8rem;
+  width: 11.8rem;
   background-color: var(--logo-color);
 
   mask-image: url(../img/logo.svg);
-  mask-size: 11rem 11rem;
+  mask-size: 11.6rem 11.6rem;
   mask-repeat: no-repeat;
 
   -webkit-mask-image: url(../img/logo.svg);
-  -webkit-mask-size: 11rem 11rem;
+  -webkit-mask-size: 11.6rem 11.6rem;
   -webkit-mask-repeat: no-repeat;
 
   position: relative;
@@ -84,17 +79,25 @@ html {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  font-size: 1.6rem;
+  font-size: 2rem;
   font-family: "GUERRILLA";
+}
+
+.topbar-heading {
+  letter-spacing: 0.4rem;
+  font-family: "GUERRILLA";
+  font-size: 3.2rem;
+  color: var(--login-text-color-dark);
 }
 
 /* NavBar - not for home */
 
 /* home-main */
 .home-main {
-  height: 88vh;
+  /* min-height: 89vh; */
   display: flex;
   flex-direction: column;
+  color: var(--login-text-color-dark);
 }
 
 /* LOG IN SECTION */
@@ -113,25 +116,33 @@ html {
   text-transform: uppercase;
 }
 
-input[type="text"],
-input[type="password"] {
+.username-input,
+.password-input {
   width: 80%;
   padding: 1.2rem 2rem;
   margin: 3.2rem auto;
   display: inline-block;
-  border: 1px solid #ccc;
+  border: 1px solid var(--login-btn-color-dark);
   box-sizing: border-box;
   border-radius: 3rem;
+  background-color: var(--h-and-f-color);
 }
 
-input[type="text"]::placeholder,
-input[type="password"]::placeholder {
-  color: #5a2020;
+.username-input::placeholder,
+.password-input::placeholder {
+  color: var(--login-btn-color-dark);
   opacity: 0.8;
   letter-spacing: 0.16rem;
 }
 
-input[type="text"] {
+.username-input:focus,
+.password-input:focus {
+  outline: none;
+  border: 2px solid var(--login-btn-color-dark);
+  background-color: #ffffff;
+}
+
+.username-input {
   margin-bottom: 0.4rem;
 }
 
@@ -144,7 +155,8 @@ input[type="text"] {
 
 .login-section__btn-container button {
   background-color: var(--login-btn-color);
-  color: white;
+  color: var(--login-text-color-dark);
+  font-weight: 700;
   padding: 1.2rem 1.8rem;
   margin: 8px 0;
   border: none;
@@ -152,6 +164,14 @@ input[type="text"] {
   width: 36%;
   border-radius: 3rem;
   border: 2px solid var(--login-btn-color);
+}
+
+#btn-register {
+  background-color: var(--h-and-f-color);
+}
+
+#btn-register:hover {
+  background-color: #d7eeed;
 }
 
 .login-section__btn-container button:hover {
@@ -164,6 +184,7 @@ input[type="text"] {
 .media-section {
   background-color: #ccc;
   width: 100%;
+  min-height: 40rem;
   height: 100%;
   margin: 0rem auto;
   background-image: url(../img/img-handy.png);
