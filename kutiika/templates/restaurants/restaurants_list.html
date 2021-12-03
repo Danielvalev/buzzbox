@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block title %}Ресторанти | Кутийка{% endblock %}
+<!-- content -->
+{% block content %}
+
+<!-- load static -->
+{% load static %}
+<h1>Ресторанти</h1>
+
+{% if restaurants %}
+
+{% for restaurant in restaurants %}
+
+{% if restaurant.logo %}
+<img src="{{ restaurant.logo.url }}" alt="{{ restaurant.name }}"
+     width="200" height="300">
+{{ restaurant.logo }}<br/>
+{% endif %}
+Име: {{ restaurant.name }}<br/>
+Адрес: {{ restaurant.address }}<br/>
+{% if restaurant.phone %}
+Телефон: {{ restaurant.phone }}<br/>
+{% endif %}
+{% if restaurant.web %}
+Сайт: {{ restaurant.web }}<br/>
+{% endif %}
+<br/>
+{% endfor %}
+
+
+{% else %}
+<h2>Все още няма ресторанти, но можеш да ни препоръчаш.</h2>
+{% endif %}
+
+{% endblock %}
