@@ -4,40 +4,7 @@
 {% block content %}
 
 <!-- load content -->
-{% load static %}
-
-<main class="home-main">
-  <section class="login-section">
-    <h2>Влез в профила си</h2>
-    <!-- <label for="uname"><b>Username</b></label> -->
-    <input
-      class="username-input"
-      type="text"
-      placeholder="Потребителско име"
-      name="uname"
-      required
-    />
-
-    <!-- <label for="psw"><b>Password</b></label> -->
-    <input
-      class="password-input"
-      type="password"
-      placeholder="Парола"
-      name="psw"
-      required
-    />
-
-    <div class="login-section__btn-container">
-      <button type="submit">Вход</button>
-      <button id="btn-register" type="submit"><a href="{% url 'register' %}">Регистрация</a></button>
-    </div>
-
-    <!-- <label>
-      <input type="checkbox" checked="checked" name="remember" /> Remember me
-    </label> -->
-  </section>
-  <section class="media-section"></section>
-</main>
+<h1>Future Home page</h1>
 
 <!-- endblock -->
 {% endblock %}
