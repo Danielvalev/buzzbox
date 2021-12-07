@@ -8,11 +8,14 @@
   <section class="login-section">
     <h2>Влез в профила си</h2>
     <!-- <label for="uname"><b>Username</b></label> -->
+      <form action="" method=POST>
+          {% csrf_token %}
+
     <input
       class="username-input"
       type="text"
       placeholder="Потребителско име"
-      name="uname"
+      name="username"
       required
     />
 
@@ -21,16 +24,17 @@
       class="password-input"
       type="password"
       placeholder="Парола"
-      name="psw"
+      name="password"
       required
     />
 
     <div class="login-section__btn-container">
       <button type="submit">Вход</button>
-      <button id="btn-register" type="submit">
+      <button id="btn-register" type="button">
         <a href="{% url 'register' %}">Регистрация</a>
       </button>
     </div>
+      </form>
 
     <!-- <label>
         <input type="checkbox" checked="checked" name="remember" /> Remember me

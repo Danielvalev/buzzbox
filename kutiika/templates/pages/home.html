@@ -6,5 +6,12 @@
 <!-- load content -->
 <h1>Future Home page</h1>
 
+{% if user.is_authenticated %}
+    <h3>Здравей {{ user.get_username }}</h3>
+    <a href="{% url 'logout' %}">Излез от профил</a>
+
+{% else %}
+    <a href="{% url 'login' %}">Вход</a>
+{% endif %}
 <!-- endblock -->
 {% endblock %}
