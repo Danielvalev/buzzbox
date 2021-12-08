@@ -4,17 +4,23 @@
 {% block content %}
 
 <!-- load content -->
-<h1>Future Home page</h1>
 
-{% if user.is_authenticated %}
-<h3>Здравей {{ user.get_username }}</h3>
-<a href="{% url 'logout' %}">Излез от профил</a>
-<br>
-<br>
-<a href="{% url 'restaurants-list' %}">Restaurants</a>
+<main class="main-section">
+    <br>
+    <h1>Future Home page</h1>
+    <br>
+    {% if user.is_authenticated %}
+    <h3>Здравей {{ user.get_username }}</h3>
+    <br>
+    <a href="{% url 'logout' %}">Излез от профил</a>
+    <br>
+    <br>
+    <a href="{% url 'restaurants-list' %}">Restaurants</a>
 
-{% else %}
-<a href="{% url 'login' %}">Вход</a>
-{% endif %}
+    {% else %}
+    <a href="{% url 'login' %}">Вход</a>
+    {% endif %}
+</main>
+
 <!-- endblock -->
 {% endblock %}
