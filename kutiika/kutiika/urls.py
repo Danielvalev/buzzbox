@@ -24,3 +24,8 @@ urlpatterns = [
                   path('restaurants/', include('restaurants.urls')),
                   path('customers/', include('customers.urls')),
               ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+# Configure Admin Titles
+admin.site.site_header = 'Kutiika Admin Dashboard'
+admin.site.site_title = 'Kutiika'
+admin.site.index_title = 'Welcome To The Kutiika Admin Dashboard'
