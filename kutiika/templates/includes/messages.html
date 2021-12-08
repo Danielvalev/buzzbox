@@ -1,5 +1,8 @@
 {% if messages %}
+{% load static %}
     {% for message in messages %}
-        {{ message }}
+    <div class="msg-pop-container">
+        <p class="msg-pop-par" >{{ message }}<p>
+    </div>
     {% endfor %}
 {% endif %}
