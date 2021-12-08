@@ -4,6 +4,15 @@
 <!-- load static -->
 {% load static %}
 <main class="main-section">
-  <h1>Регистрация</h1>
+    <h1>Регистрация</h1>
+    <br>
+    <br>
+    <form action="{% url 'register' %}" method=POST>
+        {% csrf_token %}
+
+        {{ form.as_p }}
+        <br>
+        <input type="submit" value="Потвърди">
+    </form>
 </main>
 {% endblock %}
