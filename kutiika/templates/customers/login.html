@@ -4,37 +4,37 @@
 
 <!-- load static -->
 {% load static %}
-<main class="home-main">
+<main class="main-section">
   <section class="login-section">
     <h2>Влез в профила си</h2>
     <!-- <label for="uname"><b>Username</b></label> -->
-      <form action="" method=POST>
-          {% csrf_token %}
+    <form class="login-section-form" action="" method="POST">
+      {% csrf_token %}
 
-    <input
-      class="username-input"
-      type="text"
-      placeholder="Потребителско име"
-      name="username"
-      required
-    />
+      <input
+        class="username-input"
+        type="text"
+        placeholder="Потребителско име"
+        name="username"
+        required
+      />
 
-    <!-- <label for="psw"><b>Password</b></label> -->
-    <input
-      class="password-input"
-      type="password"
-      placeholder="Парола"
-      name="password"
-      required
-    />
+      <!-- <label for="psw"><b>Password</b></label> -->
+      <input
+        class="password-input"
+        type="password"
+        placeholder="Парола"
+        name="password"
+        required
+      />
 
-    <div class="login-section__btn-container">
-      <button type="submit">Вход</button>
-      <button id="btn-register" type="button">
-        <a href="{% url 'register' %}">Регистрация</a>
-      </button>
-    </div>
-      </form>
+      <div class="login-section__btn-container">
+        <button type="submit">Вход</button>
+        <button id="btn-register" type="button">
+          <a href="{% url 'register' %}">Регистрация</a>
+        </button>
+      </div>
+    </form>
 
     <!-- <label>
         <input type="checkbox" checked="checked" name="remember" /> Remember me
