@@ -38,4 +38,6 @@ class Dish(models.Model):
 class Menu(models.Model):
     # TODO - Must be linked to Restaurant and to Dish
     # TODO - Must have date
-    pass
+    # restaurant_menu = models.ForeignKey(Restaurant, blank=True, null=True, on_delete=models.CASCADE)
+    # menu_date = models.DateField('Menu Date')
+    # dish_menu = models.ForeignKey(Dish, blank=True, null=True, on_delete=models.SET_NULL)

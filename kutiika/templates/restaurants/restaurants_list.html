@@ -5,31 +5,57 @@
 
 <!-- load static -->
 {% load static %}
-<h1>Ресторанти</h1>
-
-{% if restaurants %}
-
-{% for restaurant in restaurants %}
-
-{% if restaurant.logo %}
-<img src="{{ restaurant.logo.url }}" alt="{{ restaurant.name }}"
-     width="200" height="300"><br/>
-{% endif %}
-Име: {{ restaurant.name }}<br/>
-Описание: {{ restaurant.description }}<br/>
-Адрес: {{ restaurant.address }}<br/>
-{% if restaurant.phone %}
-Телефон: {{ restaurant.phone }}<br/>
-{% endif %}
-{% if restaurant.web %}
-Сайт: {{ restaurant.web }}<br/>
-{% endif %}
-<br/>
-{% endfor %}
+<center>
 
 
-{% else %}
-<h2>Все още няма ресторанти, но можеш да ни препоръчаш.</h2>
-{% endif %}
+    <h1>Ресторанти</h1>
 
+    {% if restaurants %}
+
+    {% for restaurant in restaurants %}
+
+    <div class="card" style="width: 45rem;">
+        {% if restaurant.logo %}
+        <img src="{{ restaurant.logo.url }}" class="card-img-top" alt="{{ restaurant.name }}">
+        {% endif %}
+        <div class="card-body">
+            <h5 class="card-title">{{ restaurant.name }}</h5>
+            <p class="card-text">{{ restaurant.description }}</p>
+            <ul>
+                <li>Адрес: {{ restaurant.address }}</li>
+                {% if restaurant.phone %}
+                <li>Телефон: {{ restaurant.phone }}</li>
+                {% endif %}
+                {% if restaurant.web %}
+                <li>Сайт: {{ restaurant.web }}</li>
+                {% endif %}
+            </ul>
+            <a href="#" class="btn btn-primary">Обедно Меню</a>
+        </div>
+    </div>
+
+    <br>
+    <br>
+
+    <!--    {% if restaurant.logo %}-->
+    <!--    <img src="{{ restaurant.logo.url }}" alt="{{ restaurant.name }}"-->
+    <!--         width="200" height="300"><br/>-->
+    <!--    {% endif %}-->
+    <!--    Име: {{ restaurant.name }}<br/>-->
+    <!--    Описание: {{ restaurant.description }}<br/>-->
+    <!--    Адрес: {{ restaurant.address }}<br/>-->
+    <!--    {% if restaurant.phone %}-->
+    <!--    Телефон: {{ restaurant.phone }}<br/>-->
+    <!--    {% endif %}-->
+    <!--    {% if restaurant.web %}-->
+    <!--    Сайт: {{ restaurant.web }}<br/>-->
+    <!--    {% endif %}-->
+    <!--    <br/>-->
+    {% endfor %}
+
+
+    {% else %}
+    <h2>Все още няма ресторанти, но можеш да ни препоръчаш.</h2>
+    {% endif %}
+</center>
 {% endblock %}
