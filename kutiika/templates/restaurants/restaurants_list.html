@@ -30,7 +30,10 @@
                 <li>Сайт: {{ restaurant.web }}</li>
                 {% endif %}
             </ul>
-            <a href="#" class="btn btn-primary">Обедно Меню</a>
+            <a href="{% url 'restaurant-menu' restaurant.id %}" class="btn btn-primary">Обедно Меню</a>
+            {% if user.is_superuser %}
+            <a href="{% url 'menu-csv' restaurant.id %}" class="btn btn-primary">Обедно Меню - CSV</a>
+            {% endif %}
         </div>
     </div>
 

@@ -17,7 +17,7 @@
                         Меню
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="{% url 'restaurant-menu' %}">Дневно Меню</a></li>
+                        <li><a class="dropdown-item" href="{% url 'restaurant-menu' 1 %}">Дневно Меню</a></li>
                         {% if user.is_authenticated %}
                         <li><a class="dropdown-item" href="{% url 'restaurants-list' %}">Ресторанти</a></li>
                         {% endif %}
