@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+{% block title %}Меню Ресторанти | Кутийка{% endblock %}
+<!-- content -->
+{% block content %}
+<center>
+    <br>
+    <h1>Lunch Menu</h1>
+    <br>
+    {% if menus %}
+    {% for menu in menus %}
+    <!--    {% for restaurant in menu.restaurant_menu.name %}-->
+    <!--    {{ restaurant }}-->
+    <!--    {% endfor %}-->
+
+    <div class="card" style="width: 55rem;">
+        <div class="card-body">
+            <br>
+            <h1 class="card-title">Restaurant: {{ menu.restaurant_menu.name }}</h1>
+            <h2 class="card-title">Date: {{ menu.menu_date }}</h2>
+            <br>
+            {% if soups %}
+            <h2 class="card-title">Супи</h2>
+            {% for soup in soups %}
+
+            {% if soup.restaurant_dish.name == menu.restaurant_menu.name %}
+
+            <p>{{ soup.name }} | {{ soup.portion_size }} мл. | {{ soup.price }} лв.</p>
+
+            {% endif %}
+            {% endfor %}
+            <br>
+            {% endif %}
+
+            {% if salads %}
+            <h2 class="card-title">Салати</h2>
+            {% for salad in salads %}
+            {% if salad.restaurant_dish.name == menu.restaurant_menu.name %}
+            <p>{{ salad.name }} | {{ salad.portion_size }} мл. | {{ salad.price }} лв.</p>
+            {% endif %}
+            {% endfor %}
+            <br>
+            {% endif %}
+
+            {% if main_dishes %}
+            <h2 class="card-title">Основни</h2>
+            {% for main_dish in main_dishes %}
+            {% if main_dish.restaurant_dish.name == menu.restaurant_menu.name %}
+            <p>{{ main_dish.name }} | {{ main_dish.portion_size }} мл. | {{ main_dish.price }} лв.</p>
+            {% endif %}
+            {% endfor %}
+            <br>
+            {% endif %}
+
+            {% if desserts %}
+            <h2 class="card-title">Десерти</h2>
+            {% for dessert in desserts %}
+            {% if dessert.restaurant_dish.name == menu.restaurant_menu.name %}
+            <p>{{ dessert.name }} | {{ dessert.portion_size }} мл. | {{ dessert.price }} лв.</p>
+            {% endif %}
+            {% endfor %}
+            <br>
+            {% endif %}
+
+            {% if other_dishes %}
+            <h2 class="card-title">Други</h2>
+            {% for other in other_dishes %}
+            {% if other.restaurant_dish.name == menu.restaurant_menu.name %}
+            <p>{{ other.name }} | {{ other.portion_size }} мл. | {{ other.price }} лв.</p>
+            {% endif %}
+            {% endfor %}
+            <br>
+            {% endif %}
+
+        </div>
+    </div>
+    <br>
+    {% endfor %}
+    {% else %}
+    <h2>Все още няма качено меню за деня</h2>
+    {% endif %}
+    <hr>
+
+</center>
+{% endblock %}
