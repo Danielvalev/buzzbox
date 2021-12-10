@@ -35,9 +35,9 @@ def register_customer(request):
         form = RegisterUserForm(request.POST)  # Extends UserCreationForm
         if form.is_valid():
             form.save()
-            username = form.cleaned_data['username']
+            email = form.cleaned_data['email']
             password = form.cleaned_data['password1']
-            user = authenticate(username=username, password=password)
+            user = authenticate(email=email, password=password)
             login(request, user)
             messages.success(request, ("Registration Successful"))
             return redirect('home')
