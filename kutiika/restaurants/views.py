@@ -1,8 +1,9 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Restaurant, Menu, Dish
 from datetime import date
 import csv
 from django.http import HttpResponseRedirect, HttpResponse, FileResponse
+from django.contrib import messages
 
 
 # Create your views here.
@@ -59,6 +60,13 @@ def restaurants_menu(request, restaurant_id=1):
 
 # Generate CSV File Menu
 def menu_csv(request, restaurant_id):
+    # Secure the file
+    restaurant = Restaurant.objects.get(id=restaurant_id)
+    manager_id = restaurant.manager.id
+    if request.user.id != manager_id:
+        messages.success(request, 'You are not the manager of this restaurant')
+        return redirect('restaurants-list')
+
     # Designate The Model
     today = str(date.today())
     year, month, day = today.split('-')

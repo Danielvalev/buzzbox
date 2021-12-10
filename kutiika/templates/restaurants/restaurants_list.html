@@ -31,8 +31,10 @@
                 {% endif %}
             </ul>
             <a href="{% url 'restaurant-menu' restaurant.id %}" class="btn btn-primary">Обедно Меню</a>
-            {% if user.is_superuser %}
+            {% if user.is_restaurant_manager %}
+            {% if user.id == restaurant.manager.id %}
             <a href="{% url 'menu-csv' restaurant.id %}" class="btn btn-primary">Обедно Меню - CSV</a>
+            {% endif %}
             {% endif %}
         </div>
     </div>
