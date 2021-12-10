@@ -68,6 +68,8 @@ def menu_csv(request, restaurant_id):
         return redirect('restaurants-list')
 
     # Designate The Model
+
+    # TODO make a function for date
     today = str(date.today())
     year, month, day = today.split('-')
 
@@ -92,3 +94,38 @@ def menu_csv(request, restaurant_id):
                              dish.portion_size, dish.price])
 
     return response
+
+
+def create_menu(request):
+    return render(request, 'restaurants/create_menu.html')
+
+
+def manager_menu_list(request):
+    # Check if user is restaurant manager
+    if not request.user.is_restaurant_manager:
+        messages.success(request, 'You are not a manager')
+        return redirect('home')
+
+    today = str(date.today())
+    year, month, day = today.split('-')
+
+    # Take manager id
+    manager_id = request.user.id
+
+    restaurants = Restaurant.objects.filter(manager=manager_id)
+    menus = []
+    dishes = []
+    for restaurant in restaurants:
+        menus_list = Menu.objects.filter(restaurant_menu=restaurant.id, menu_date__year=year, menu_date__month=month,
+                                         menu_date__day=day)
+
+        for menu in menus_list:
+            menus.append(menu)
+            for dish in menu.dish_menu.all():
+                dishes.append(dish)
+
+    return render(request, 'restaurants/manager_menu_list.html', {
+        'restaurants': restaurants,
+        'menus': menus,
+        'dishes': dishes,
+    })

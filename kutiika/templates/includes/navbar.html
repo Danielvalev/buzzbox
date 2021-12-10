@@ -30,7 +30,8 @@
                         Manager
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#">Create Menu</a></li>
+                        <li><a class="dropdown-item" href="{% url 'create-menu' %}">Create Menu</a></li>
+                        <li><a class="dropdown-item" href="{% url 'manager-menu-list' %}">My Menus</a></li>
                     </ul>
                 </li>
                 {% endif %}

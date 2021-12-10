@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block title %}Моите Менюта | Кутийка{% endblock %}
+<!-- content -->
+{% block content %}
+
+<!-- load static -->
+{% load static %}
+<center>
+
+
+    <h1>Моите Менюта</h1>
+
+    {% if menus %}
+    {% for menu in menus %}
+
+    <div class="card" style="width: 55rem;">
+        <div class="card-body">
+            <br>
+            <h1 class="card-title">Restaurant: {{ menu.restaurant_menu.name }}</h1>
+            <h2 class="card-title">Date: {{ menu.menu_date }}</h2>
+            <br>
+
+            {% for dish in dishes %}
+                {{ dish }}
+
+            {% endfor %}
+        </div>
+    </div>
+    <br>
+
+    {% endfor %}
+    {% endif %}
+
+
+</center>
+{% endblock %}
