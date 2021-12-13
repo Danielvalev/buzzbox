@@ -4,15 +4,69 @@
 <!-- load static -->
 {% load static %}
 <main class="main-section">
+  <div class="register-page-container">
     <h1>Регистрация</h1>
-    <br>
-    <br>
-    <form action="{% url 'register' %}" method=POST>
-        {% csrf_token %}
 
-        {{ form.as_p }}
-        <br>
-        <input type="submit" value="Потвърди">
+    <!-- <form action="{% url 'register' %}" method="POST">
+      {% csrf_token %} {{ form.as_p }}
+      <br />
+      <input type="submit" value="Потвърди" />
+    </form> -->
+
+    <form class="login-section-form" action="" method="POST">
+      {% csrf_token %}
+
+      <input
+        class="username-input"
+        type="email"
+        placeholder="Електронна Поща"
+        name="email"
+        required
+      />
+
+      <!-- <label for="psw"><b>Password</b></label> -->
+      <input
+        class="username-input"
+        type="text"
+        placeholder="Име"
+        name="name"
+        required
+      />
+
+      <input
+        class="username-input"
+        type="text"
+        placeholder="Фамилия"
+        name="family"
+        required
+      />
+
+      <input
+        class="password-input"
+        type="password"
+        placeholder="Парола"
+        name="password"
+        required
+      />
+      <ul class="password-requirements">
+        <li>Паролата не трябва да бъде подобна на личните ви данни.</li>
+        <li>Паролата трябва да съдържа най-малко 8 символа.</li>
+        <li>Паролата не трябва да бъде, често използвана.</li>
+        <li>Паролата не трябва да бъде само цифри.</li>
+      </ul>
+
+      <input
+        class="password-input"
+        type="password"
+        placeholder="Потвърдете Парола"
+        name="password-validation"
+        required
+      />
+
+      <div class="login-section__btn-container">
+        <button type="submit">Регистрация</button>
+      </div>
     </form>
+  </div>
 </main>
 {% endblock %}
