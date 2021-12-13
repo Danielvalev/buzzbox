@@ -1,59 +1,16 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="{% url 'home' %}">Кутийка</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Menu</a>
-                </li>
-
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                       data-bs-toggle="dropdown" aria-expanded="false">
-                        Меню
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="{% url 'restaurant-menu' 1 %}">Дневно Меню</a></li>
-                        {% if user.is_authenticated %}
-                        <li><a class="dropdown-item" href="{% url 'restaurants-list' %}">Ресторанти</a></li>
-                        {% endif %}
-                    </ul>
-                </li>
-                {% if user.is_restaurant_manager %}
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                       data-bs-toggle="dropdown" aria-expanded="false">
-                        Manager
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="{% url 'create-menu' %}">Create Menu</a></li>
-                        <li><a class="dropdown-item" href="{% url 'manager-menu-list' %}">My Menus</a></li>
-                    </ul>
-                </li>
-                {% endif %}
-
-            </ul>
-            <ul class="d-flex navbar-nav mb-2 mb-lg-0">
-                {% if user.is_authenticated %}
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Профил {{ user }} |</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'logout' %}">Изход</a>
-                </li>
-                {% else %}
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'login' %}">Вход</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'register' %}">Регистрация</a>
-                </li>
-                {% endif %}
-            </ul>
-        </div>
+{% comment %}
+<nav class="navbar">
+  <div class="nav-content">
+    <div class="nav-icon">
+      <div class="bar one"></div>
+      <div class="bar two"></div>
     </div>
+
+    <div class="nav-links">
+      <a href="#">Home</a>
+      <a href="#">Contact</a>
+      <a href="#">Login</a>
+    </div>
+  </div>
 </nav>
+{% endcomment %}
