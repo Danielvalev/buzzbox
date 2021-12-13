@@ -287,7 +287,7 @@ nav {
 
 .bar {
   height: 3px;
-  width: 32px;
+  width: 40px;
   background: rgb(0, 0, 0);
   transition: 0.5s;
 }
@@ -352,7 +352,11 @@ nav {
   }
 
   .two {
-    margin-top: 10px;
+    margin-top: 12px;
+  }
+
+  .middle-bar {
+    margin-top: 12px;
   }
 
   .logo {
@@ -362,11 +366,16 @@ nav {
 }
 
 .show .one {
-  transform: rotate(45deg) translateY(9px);
+  transform: rotate(45deg) translateY(11px) translateX(10px);
 }
 
 .show .two {
-  transform: rotate(-45deg) translateY(-9px);
+  transform: rotate(-45deg) translateY(-11px) translateX(10px);
+}
+
+.show .middle-bar {
+  transform: scale(0);
+  opacity: 0;
 }
 
 /* ///////////////////////////////// */
@@ -387,7 +396,6 @@ nav {
   font-size: 2.2rem;
   font-weight: 700;
   letter-spacing: 0.2em;
-
   padding: 2rem 2rem 1rem 2rem;
 }
 
@@ -403,6 +411,10 @@ nav {
 
 .home-img-container {
   margin: 0 auto;
+}
+
+#welcome-heading {
+  letter-spacing: 0.1em;
 }
 
 /* ///////////////////////////////// */

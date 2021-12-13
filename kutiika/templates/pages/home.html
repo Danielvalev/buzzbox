@@ -8,6 +8,21 @@
 
 <main class="main-section">
 
+    {% if user.is_authenticated %}
+
+
+    <div class="main-section-text-container">
+        <h2 class="home-heading" id="welcome-heading">Здравей {{ user.get_username }}</h3>
+        <p class="home-paragraph"><a href="{% url 'restaurants-list' %}">Прегледай Ресторанти</a></p>
+        <p class="home-paragraph"><a href="{% url 'restaurant-menu' 1 %}">Виж Дневното Меню</a></p>
+    </div>
+
+    <div class="home-img-container">
+        <img src="{% static '/img/home-img-1.jpg' %}" alt="" class="home-image">
+    </div>
+
+
+    {% else %}
     <div class="main-section-text-container">
         <h1 class="home-heading">Какво е Кутийка</h1>
         <p class="home-paragraph">
@@ -23,16 +38,6 @@
     <div class="home-img-container">
         <img src="{% static '/img/home-img-1.jpg' %}" alt="" class="home-image">
     </div>
-
-    {% if user.is_authenticated %}
-    <h3>Здравей {{ user.get_username }}</h3>
-    <a href="{% url 'logout' %}">Излез от профил</a>
-    <br/>
-    <br/>
-    <a href="{% url 'restaurants-list' %}">Restaurants</a>
-
-    {% else %}
-    <a href="{% url 'login' %}">Вход</a>
     {% endif %}
 </main>
 <!-- endblock -->
