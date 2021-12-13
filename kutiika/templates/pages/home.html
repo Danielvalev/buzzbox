@@ -3,9 +3,26 @@
 <!-- block content -->
 {% block content %}
 
-<!-- load content -->
+<!-- load static -->
+{% load static %}
+
 <main class="main-section">
-    <h1>Future Home page</h1>
+
+    <div class="main-section-text-container">
+        <h1 class="home-heading">Какво е Кутийка</h1>
+        <p class="home-paragraph">
+            Първата в България услуга за доставка на храна в съдове за многократна употреба. Ние се грижим твоята храна да пристига винаги топла, във висококачествени кутии, направени от устойчиви материали. 
+        </p>
+
+        <h1 class="home-heading" id="last-home-heading">Как Работи</h1>
+        <p class="home-paragraph">
+            За да се насладиш на обяд в една от нашите кутии, виж кои са нашите партньори и при следваща поръчка заяви, че искаш да използваш многократна кутия.
+        </p>
+    </div>
+
+    <div class="home-img-container">
+        <img src="{% static '/img/home-img-1.jpg' %}" alt="" class="home-image">
+    </div>
 
     {% if user.is_authenticated %}
     <h3>Здравей {{ user.get_username }}</h3>
