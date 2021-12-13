@@ -102,6 +102,7 @@ html {
   display: flex;
   flex-direction: column;
   color: var(--login-text-color-dark);
+  font-size: 1.4rem;
 }
 
 /* LOG IN SECTION */
@@ -297,7 +298,7 @@ nav {
   transition: all 0.3s;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1010px) {
   .nav-links {
     position: absolute;
     top: 11.8rem;
@@ -420,6 +421,19 @@ nav {
 /* ///////////////////////////////// */
 /* ///////REGISTER PAGE /////////// */
 .register-page-container {
-  background-color: rgb(255, 250, 242);
   margin: 3rem auto;
+  width: 100%;
 }
+
+.register-page-container h1 {
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.password-requirements {
+  margin: -2rem auto 0 auto;
+}
+
+/* /////////////////////////////////////////// */
+/* ////////// REMOVE LINKS STYLING /////////// */

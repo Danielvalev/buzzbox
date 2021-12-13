@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+<!-- block content -->
+{% block content %}
+
+<!-- load static -->
+{% load static %}
+
+<main class="main-section">
+    <h1>КОНТАКТИ КОНТАКТИ КОНТАКТИ</h1>
+    {% if user.is_authenticated %}
+
+
+    <div class="main-section-text-container">
+        <h2 class="home-heading" id="welcome-heading">Здравей {{ user.get_username }}</h3>
+        <p class="home-paragraph"><a href="{% url 'restaurants-list' %}">Прегледай Ресторанти</a></p>
+        <p class="home-paragraph"><a href="{% url 'restaurant-menu' 1 %}">Виж Дневното Меню</a></p>
+    </div>
+
+    <div class="home-img-container">
+        <img src="{% static '/img/home-img-1.jpg' %}" alt="" class="home-image">
+    </div>
+
+
+    {% else %}
+    <div class="main-section-text-container">
+        <h1 class="home-heading">Какво е Кутийка</h1>
+        <p class="home-paragraph">
+            Първата в България услуга за доставка на храна в съдове за многократна употреба. Ние се грижим твоята храна да пристига винаги топла, във висококачествени кутии, направени от устойчиви материали. 
+        </p>
+
+        <h1 class="home-heading" id="last-home-heading">Как Работи</h1>
+        <p class="home-paragraph">
+            За да се насладиш на обяд в една от нашите кутии, виж кои са нашите партньори и при следваща поръчка заяви, че искаш да използваш многократна кутия.
+        </p>
+    </div>
+
+    <div class="home-img-container">
+        <img src="{% static '/img/home-img-1.jpg' %}" alt="" class="home-image">
+    </div>
+    {% endif %}
+</main>
+<!-- endblock -->
+{% endblock %}
