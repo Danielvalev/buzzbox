@@ -117,10 +117,10 @@ Watching for file changes with StatReloader
 Performing system checks...
 
 System check identified no issues (0 silenced).
-November 27, 2021 - 17:39:23
-Django version 3.2.9, using settings 'buzzbox.settings'
+January 12, 2022 - 11:14:25
+Django version 3.2.9, using settings 'core.settings'
 Starting development server at http://127.0.0.1:8000/
-Quit the server with CONTROL-C.
+Quit the server with CTRL-BREAK.
 ```
 
 6. If you cannot run step 5, You may have to migrate any unapplied migrations by : 
