@@ -1,8 +1,8 @@
 <p align="center">
-  <h2 align="center">Kutiika</h2>
+  <h2 align="center">Buzzbox</h2>
 
   <p align="center">
-    Project for kutiika startup
+    Project for Buzzbox startup
     <br />
     <br />
     <a href="https://github.com/Danielvalev/kutiika">View Demo</a>
@@ -70,8 +70,8 @@ Make sure you have already downloaded and install python3 and pip
 
 1. The first thing to do is to clone the repository:
  ```sh
-$ git clone https://github.com/Danielvalev/kutiika
-$ cd kutiika
+$ git clone https://github.com/Danielvalev/buzzbox
+$ cd buzzbox
 `````````````
 
 2. Create a virtual environment to install dependencies:
@@ -104,7 +104,7 @@ session operates in a virtual environment set up by `py -m venv env`.
 
 Once `pip` has finished downloading the dependencies:
 ```sh
-(env)$ cd kutiika
+(env)$ cd buzzbox
 ```
 
 5. Run Server
@@ -118,7 +118,7 @@ Performing system checks...
 
 System check identified no issues (0 silenced).
 November 27, 2021 - 17:39:23
-Django version 3.2.9, using settings 'kutiika.settings'
+Django version 3.2.9, using settings 'buzzbox.settings'
 Starting development server at http://127.0.0.1:8000/
 Quit the server with CONTROL-C.
 ```
@@ -130,7 +130,7 @@ Quit the server with CONTROL-C.
 ```
 After this run Step 5 again. 
 
-And navigate to kutiika homepage using `http://127.0.0.1:8000`.
+And navigate to buzzbox homepage using `http://127.0.0.1:8000`.
 
 #### Other syntaxes
 To kill/stop the server 
@@ -144,7 +144,7 @@ To deactivate the Virtual Environment
 <!-- ROADMAP -->
 ## Roadmap
 
-See the [open issues](https://github.com/Danielvalev/kutiika/issues) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/Danielvalev/buzzbox/issues) for a list of proposed features (and known issues).
 
 
 <!-- LICENSE -->
@@ -159,7 +159,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 Daniel Valev - danielvalev89@gmail.com
 
-Project Link: [https://github.com/Danielvalev/kutiika](https://github.com/Danielvalev/kutiika)
+Project Link: [https://github.com/Danielvalev/buzzbox](https://github.com/Danielvalev/buzzbox)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 [product-screenshot]: images/screenshot.png

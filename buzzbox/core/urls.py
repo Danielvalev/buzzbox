@@ -26,6 +26,6 @@ urlpatterns = [
               ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 # Configure Admin Titles
-admin.site.site_header = 'Kutiika Admin Dashboard'
-admin.site.site_title = 'Kutiika'
-admin.site.index_title = 'Welcome To The Kutiika Admin Dashboard'
+admin.site.site_header = 'Buzzbox Admin Dashboard'
+admin.site.site_title = 'Buzzbox'
+admin.site.index_title = 'Welcome To The Buzzbox Admin Dashboard'
